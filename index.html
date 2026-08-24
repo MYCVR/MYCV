@@ -60,7 +60,6 @@ cursor:pointer;
 --border:#e2e8f0;
 }
 
-
 /* HEADER */
 
 header{
@@ -136,7 +135,6 @@ border:0;
 background:none;
 font-size:25px;
 }
-
 
 /* HERO */
 
@@ -233,7 +231,6 @@ color:#aebdcd;
 font-size:11px;
 }
 
-
 /* VALUE */
 
 .value{
@@ -271,7 +268,6 @@ color:var(--muted);
 font-size:10px;
 }
 
-
 /* GENERAL */
 
 .section{
@@ -303,7 +299,6 @@ max-width:650px;
 font-size:13px;
 line-height:1.8;
 }
-
 
 /* INTRO */
 
@@ -350,7 +345,6 @@ color:var(--muted);
 font-size:11px;
 line-height:1.5;
 }
-
 
 /* VISUAL */
 
@@ -437,7 +431,6 @@ margin:5px 0;
 width:70%;
 }
 
-
 /* TEMPLATES */
 
 .template-area{
@@ -495,39 +488,75 @@ transform:translateY(-6px);
 box-shadow:0 20px 45px rgba(7,26,51,.11);
 }
 
-
-/* LARGE TEMPLATE PHOTOS */
-
 .preview{
-height:300px;
+height:260px;
 background:#e6edf4;
 display:flex;
 justify-content:center;
 align-items:center;
-overflow:hidden;
-position:relative;
 }
 
-.template-image{
+.paper{
+width:150px;
+height:215px;
+background:white;
+box-shadow:0 10px 25px rgba(0,0,0,.14);
+display:grid;
+grid-template-columns:48px 1fr;
+gap:8px;
+padding:12px;
+}
+
+.paper-left{
+background:var(--navy);
+padding-top:8px;
+}
+
+.paper-photo{
+width:32px;
+height:38px;
+border-radius:4px;
+margin:0 auto 10px;
+overflow:hidden;
+background:#ddd;
+}
+
+.paper-photo img{
 width:100%;
 height:100%;
 object-fit:cover;
-display:block;
 }
 
-.preview-overlay{
-position:absolute;
-inset:0;
-background:linear-gradient(
-180deg,
-rgba(0,0,0,.05),
-rgba(7,26,51,.35)
-);
-pointer-events:none;
+.paper-right{
+padding:3px;
 }
 
+.paper-name{
+height:7px;
+width:80%;
+background:var(--navy);
+margin-bottom:5px;
+}
 
-/* TEMPLATE INFO */
+.paper-gold{
+height:4px;
+width:55%;
+background:var(--gold);
+margin-bottom:15px;
+}
+
+.paper-heading{
+height:4px;
+width:60%;
+background:var(--blue);
+margin:11px 0 6px;
+}
+
+.paper-line{
+height:3px;
+background:#dce2e8;
+margin:5px 0;
+}
 
 .info{
 padding:17px;
@@ -587,7 +616,6 @@ font-size:9px;
 font-weight:900;
 }
 
-
 /* HOW */
 
 .steps{
@@ -622,7 +650,6 @@ color:var(--muted);
 font-size:10px;
 line-height:1.6;
 }
-
 
 /* CRUISE */
 
@@ -695,7 +722,6 @@ font-size:11px;
 line-height:1.8;
 }
 
-
 /* BENEFITS */
 
 .benefits{
@@ -737,7 +763,6 @@ font-size:10px;
 line-height:1.65;
 }
 
-
 /* ABOUT */
 
 .about{
@@ -754,7 +779,6 @@ text-align:center;
 max-width:750px;
 margin:auto;
 }
-
 
 /* FAQ */
 
@@ -795,7 +819,6 @@ line-height:1.7;
 .faq-item.open .answer{
 display:block;
 }
-
 
 /* CONTACT */
 
@@ -865,7 +888,6 @@ font-size:11px;
 font-weight:900;
 }
 
-
 /* FOOTER */
 
 footer{
@@ -886,7 +908,6 @@ letter-spacing:2px;
 color:#c9a55c;
 font-weight:800;
 }
-
 
 /* BAG DRAWER */
 
@@ -910,7 +931,7 @@ position:fixed;
 top:0;
 right:0;
 height:100vh;
-width:420px;
+width:390px;
 max-width:92%;
 background:white;
 z-index:4500;
@@ -964,8 +985,8 @@ align-items:flex-start;
 }
 
 .bag-photo{
-width:80px;
-height:95px;
+width:55px;
+height:70px;
 background:#e9eef3;
 border-radius:6px;
 overflow:hidden;
@@ -985,21 +1006,21 @@ flex:1;
 .bag-item-info strong{
 display:block;
 color:var(--navy);
-font-size:14px;
+font-size:13px;
 margin-bottom:5px;
 }
 
-.bag-price{
-font-size:17px;
-font-weight:900;
-color:var(--navy);
-margin:7px 0;
+.bag-item-info span{
+color:var(--muted);
+font-size:10px;
+line-height:1.5;
 }
 
 .bag-description{
-color:var(--muted);
+margin-top:8px;
+color:#526174;
 font-size:10px;
-line-height:1.6;
+line-height:1.55;
 }
 
 .remove-item{
@@ -1063,7 +1084,6 @@ border-radius:7px;
 font-size:10px;
 font-weight:800;
 }
-
 
 /* CHECKOUT MODAL */
 
@@ -1152,6 +1172,7 @@ font-size:12px;
 
 .group input:focus{
 border-color:var(--blue);
+box-shadow:0 0 0 3px rgba(23,103,168,.08);
 }
 
 .total{
@@ -1195,7 +1216,6 @@ color:#7b8795;
 font-size:9px;
 margin-top:8px;
 }
-
 
 /* RESPONSIVE */
 
@@ -1301,7 +1321,6 @@ max-width:100%;
 
 <body>
 
-
 <!-- HEADER -->
 
 <header>
@@ -1309,23 +1328,16 @@ max-width:100%;
 <div class="navbar">
 
 <a href="#home" class="logo">
-
 MY<span>CV</span>
-
 <small>BY SEABORNE INTERNATIONAL MCS</small>
-
 </a>
 
 <nav class="nav">
 
 <a href="#home">Home</a>
-
 <a href="#templates">CV Templates</a>
-
 <a href="#how">How It Works</a>
-
 <a href="#about">About Us</a>
-
 <a href="#contact">Contact</a>
 
 <a href="#templates" class="nav-cta">
@@ -1339,7 +1351,6 @@ Create My CV
 </div>
 
 </header>
-
 
 <!-- HERO -->
 
@@ -1384,7 +1395,6 @@ How It Works
 
 </section>
 
-
 <!-- VALUE -->
 
 <div class="value">
@@ -1410,7 +1420,6 @@ How It Works
 </div>
 
 </div>
-
 
 <!-- INTRO -->
 
@@ -1464,7 +1473,6 @@ into a clean and professional format.
 
 </div>
 
-
 <div class="visual">
 
 <div class="cv">
@@ -1472,11 +1480,8 @@ into a clean and professional format.
 <div class="cv-left">
 
 <div class="circle">
-
-<img
-src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=300&q=80"
+<img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=300&q=80"
 alt="Professional candidate">
-
 </div>
 
 <div class="left-line"></div>
@@ -1523,7 +1528,6 @@ alt="Professional candidate">
 
 </section>
 
-
 <!-- TEMPLATES -->
 
 <section class="template-area" id="templates">
@@ -1539,8 +1543,8 @@ Choose a CV style that fits your career.
 </h2>
 
 <p class="description">
-Select from our professionally designed CV formats created
-for different career profiles.
+Select from our four professional CV styles designed for
+different career requirements.
 </p>
 
 <div class="filters">
@@ -1574,9 +1578,7 @@ ATS
 
 </div>
 
-
 <div class="templates">
-
 
 <!-- EXECUTIVE PROFESSIONAL -->
 
@@ -1584,12 +1586,34 @@ ATS
 
 <div class="preview">
 
-<img
-class="template-image"
-src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=1200&q=85"
-alt="Executive Professional CV">
+<div class="paper">
 
-<div class="preview-overlay"></div>
+<div class="paper-left">
+
+<div class="paper-photo">
+<img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=600&q=85"
+alt="Executive Professional">
+</div>
+
+</div>
+
+<div class="paper-right">
+
+<div class="paper-name"></div>
+<div class="paper-gold"></div>
+
+<div class="paper-heading"></div>
+<div class="paper-line"></div>
+<div class="paper-line"></div>
+<div class="paper-line"></div>
+
+<div class="paper-heading"></div>
+<div class="paper-line"></div>
+<div class="paper-line"></div>
+
+</div>
+
+</div>
 
 </div>
 
@@ -1600,8 +1624,8 @@ alt="Executive Professional CV">
 <h3>Executive Professional</h3>
 
 <p>
-Premium CV presentation designed for experienced professionals,
-supervisors and management-level candidates.
+Premium professional CV format designed for experienced
+candidates, managers and career-focused professionals.
 </p>
 
 <div class="bottom">
@@ -1610,12 +1634,11 @@ supervisors and management-level candidates.
 ₹799 <small>one-time</small>
 </div>
 
-<button
-class="add"
+<button class="add"
 onclick="addToBag(
 'Executive Professional',
-'https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=1200&q=85',
-'Premium CV presentation designed for experienced professionals, supervisors and management-level candidates.'
+'https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=600&q=85',
+'Premium professional CV format designed for experienced candidates, managers and career-focused professionals.'
 )">
 Add to Bag
 </button>
@@ -1626,19 +1649,47 @@ Add to Bag
 
 </div>
 
-
 <!-- CRUISE PROFESSIONAL -->
 
 <div class="card" data-category="cruise">
 
-<div class="preview">
+<div class="preview"
+style="
+background:
+linear-gradient(rgba(7,26,51,.25),rgba(7,26,51,.25)),
+url('https://images.unsplash.com/photo-1540946485063-a40da27545f8?auto=format&fit=crop&w=900&q=85');
+background-size:cover;
+background-position:center;
+">
 
-<img
-class="template-image"
-src="https://images.unsplash.com/photo-1540946485063-a40da27545f8?auto=format&fit=crop&w=1200&q=85"
-alt="Cruise Professional CV">
+<div class="paper">
 
-<div class="preview-overlay"></div>
+<div class="paper-left">
+
+<div class="paper-photo">
+<img src="https://images.unsplash.com/photo-1540946485063-a40da27545f8?auto=format&fit=crop&w=600&q=85"
+alt="Cruise Professional">
+</div>
+
+</div>
+
+<div class="paper-right">
+
+<div class="paper-name"></div>
+<div class="paper-gold"></div>
+
+<div class="paper-heading"></div>
+<div class="paper-line"></div>
+<div class="paper-line"></div>
+
+<div class="paper-heading"></div>
+<div class="paper-line"></div>
+<div class="paper-line"></div>
+<div class="paper-line"></div>
+
+</div>
+
+</div>
 
 </div>
 
@@ -1649,8 +1700,8 @@ alt="Cruise Professional CV">
 <h3>Cruise Professional</h3>
 
 <p>
-Industry-focused CV presentation for cruise ship, maritime
-hospitality and onboard career opportunities.
+Cruise-focused CV style designed for candidates targeting
+cruise lines and maritime hospitality opportunities.
 </p>
 
 <div class="bottom">
@@ -1659,12 +1710,11 @@ hospitality and onboard career opportunities.
 ₹799 <small>one-time</small>
 </div>
 
-<button
-class="add"
+<button class="add"
 onclick="addToBag(
 'Cruise Professional',
-'https://images.unsplash.com/photo-1540946485063-a40da27545f8?auto=format&fit=crop&w=1200&q=85',
-'Industry-focused CV presentation for cruise ship, maritime hospitality and onboard career opportunities.'
+'https://images.unsplash.com/photo-1540946485063-a40da27545f8?auto=format&fit=crop&w=600&q=85',
+'Cruise-focused CV style designed for candidates targeting cruise lines and maritime hospitality opportunities.'
 )">
 Add to Bag
 </button>
@@ -1675,19 +1725,47 @@ Add to Bag
 
 </div>
 
-
 <!-- HOSPITALITY PRO -->
 
 <div class="card" data-category="hospitality">
 
-<div class="preview">
+<div class="preview"
+style="
+background:
+linear-gradient(rgba(7,26,51,.25),rgba(7,26,51,.25)),
+url('https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=900&q=85');
+background-size:cover;
+background-position:center;
+">
 
-<img
-class="template-image"
-src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=85"
-alt="Hospitality Pro CV">
+<div class="paper">
 
-<div class="preview-overlay"></div>
+<div class="paper-left">
+
+<div class="paper-photo">
+<img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=600&q=85"
+alt="Hospitality Pro">
+</div>
+
+</div>
+
+<div class="paper-right">
+
+<div class="paper-name"></div>
+<div class="paper-gold"></div>
+
+<div class="paper-heading"></div>
+<div class="paper-line"></div>
+<div class="paper-line"></div>
+
+<div class="paper-heading"></div>
+<div class="paper-line"></div>
+<div class="paper-line"></div>
+<div class="paper-line"></div>
+
+</div>
+
+</div>
 
 </div>
 
@@ -1698,8 +1776,8 @@ alt="Hospitality Pro CV">
 <h3>Hospitality Pro</h3>
 
 <p>
-Professional CV format for hotel, restaurant, hospitality
-and guest-service professionals.
+Professional CV layout designed for hotel, restaurant,
+hospitality and guest-service professionals.
 </p>
 
 <div class="bottom">
@@ -1708,12 +1786,11 @@ and guest-service professionals.
 ₹799 <small>one-time</small>
 </div>
 
-<button
-class="add"
+<button class="add"
 onclick="addToBag(
 'Hospitality Pro',
-'https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=85',
-'Professional CV format for hotel, restaurant, hospitality and guest-service professionals.'
+'https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=600&q=85',
+'Professional CV layout designed for hotel, restaurant, hospitality and guest-service professionals.'
 )">
 Add to Bag
 </button>
@@ -1724,19 +1801,47 @@ Add to Bag
 
 </div>
 
-
 <!-- ATS PROFESSIONAL -->
 
 <div class="card" data-category="ats">
 
-<div class="preview">
+<div class="preview"
+style="
+background:
+linear-gradient(rgba(7,26,51,.25),rgba(7,26,51,.25)),
+url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=900&q=85');
+background-size:cover;
+background-position:center;
+">
 
-<img
-class="template-image"
-src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1200&q=85"
-alt="ATS Professional CV">
+<div class="paper">
 
-<div class="preview-overlay"></div>
+<div class="paper-left">
+
+<div class="paper-photo">
+<img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=600&q=85"
+alt="ATS Professional">
+</div>
+
+</div>
+
+<div class="paper-right">
+
+<div class="paper-name"></div>
+<div class="paper-gold"></div>
+
+<div class="paper-heading"></div>
+<div class="paper-line"></div>
+<div class="paper-line"></div>
+<div class="paper-line"></div>
+
+<div class="paper-heading"></div>
+<div class="paper-line"></div>
+<div class="paper-line"></div>
+
+</div>
+
+</div>
 
 </div>
 
@@ -1747,8 +1852,8 @@ alt="ATS Professional CV">
 <h3>ATS Professional</h3>
 
 <p>
-Clean and structured CV format designed for readability,
-professional applications and ATS-friendly presentation.
+Clean and structured CV format designed for ATS-friendly
+presentation and modern recruitment processes.
 </p>
 
 <div class="bottom">
@@ -1757,12 +1862,11 @@ professional applications and ATS-friendly presentation.
 ₹799 <small>one-time</small>
 </div>
 
-<button
-class="add"
+<button class="add"
 onclick="addToBag(
 'ATS Professional',
-'https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1200&q=85',
-'Clean and structured CV format designed for readability, professional applications and ATS-friendly presentation.'
+'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=600&q=85',
+'Clean and structured CV format designed for ATS-friendly presentation and modern recruitment processes.'
 )">
 Add to Bag
 </button>
@@ -1773,11 +1877,9 @@ Add to Bag
 
 </div>
 
-
 </div>
 
 </section>
-
 
 <!-- HOW IT WORKS -->
 
@@ -1824,7 +1926,6 @@ A straightforward online process for candidates.
 </div>
 
 </section>
-
 
 <!-- CRUISE -->
 
@@ -1881,7 +1982,6 @@ Explore Templates →
 </div>
 
 </section>
-
 
 <!-- BENEFITS -->
 
@@ -1943,7 +2043,6 @@ Options for cruise, hospitality, hotel and international career profiles.
 
 </section>
 
-
 <!-- ABOUT -->
 
 <section class="about" id="about">
@@ -1972,7 +2071,6 @@ clean and modern CV formats.
 </div>
 
 </section>
-
 
 <!-- FAQ -->
 
@@ -2042,7 +2140,7 @@ How do I place my order?
 
 <div class="answer">
 Select a template, click Add to Bag, review your bag,
-click Checkout, enter your full name and contact number
+click Checkout, enter your full name and contact number,
 and proceed to the secure payment page.
 </div>
 
@@ -2051,7 +2149,6 @@ and proceed to the secure payment page.
 </div>
 
 </section>
-
 
 <!-- CONTACT -->
 
@@ -2102,7 +2199,6 @@ rel="noopener">
 
 </section>
 
-
 <!-- FOOTER -->
 
 <footer>
@@ -2125,37 +2221,30 @@ Seaborne International MCS
 
 </footer>
 
-
 <!-- BAG OVERLAY -->
 
-<div
-class="bag-overlay"
+<div class="bag-overlay"
 id="bagOverlay"
 onclick="closeBag()">
 </div>
 
-
 <!-- BAG DRAWER -->
 
-<div
-class="bag-drawer"
+<div class="bag-drawer"
 id="bagDrawer">
 
 <div class="bag-head">
 
 <h2>Your Bag</h2>
 
-<button
-class="close-bag"
+<button class="close-bag"
 onclick="closeBag()">
 ×
 </button>
 
 </div>
 
-
-<div
-class="bag-content"
+<div class="bag-content"
 id="bagContent">
 
 <div class="bag-empty">
@@ -2164,9 +2253,7 @@ Your bag is empty.
 
 </div>
 
-
-<div
-class="bag-footer"
+<div class="bag-footer"
 id="bagFooter"
 style="display:none">
 
@@ -2180,14 +2267,12 @@ style="display:none">
 
 </div>
 
-<button
-class="checkout-btn"
+<button class="checkout-btn"
 onclick="openCheckout()">
 Checkout
 </button>
 
-<button
-class="continue-btn"
+<button class="continue-btn"
 onclick="closeBag()">
 Continue Shopping
 </button>
@@ -2196,11 +2281,9 @@ Continue Shopping
 
 </div>
 
-
 <!-- CHECKOUT MODAL -->
 
-<div
-class="modal"
+<div class="modal"
 id="modal">
 
 <div class="checkout">
@@ -2231,9 +2314,7 @@ Professional CV Service · ₹799
 
 </div>
 
-
 <form id="form">
-
 
 <!-- FULL NAME -->
 
@@ -2247,11 +2328,9 @@ Full Name *
 type="text"
 id="fullName"
 placeholder="Enter your full name"
-autocomplete="name"
 required>
 
 </div>
-
 
 <!-- CONTACT NUMBER -->
 
@@ -2265,11 +2344,9 @@ Contact Number *
 type="tel"
 id="contactNumber"
 placeholder="+91 XXXXX XXXXX"
-autocomplete="tel"
 required>
 
 </div>
-
 
 <div class="total">
 
@@ -2280,7 +2357,6 @@ required>
 </strong>
 
 </div>
-
 
 <button
 class="pay"
@@ -2303,36 +2379,21 @@ Pay Now – ₹799
 
 </div>
 
-
 <script>
 
-
-/* GOOGLE APPS SCRIPT */
+/* GOOGLE APPS SCRIPT WEB APP */
 
 const GOOGLE_SCRIPT_URL =
-"https://script.google.com/macros/s/AKfycbzBe4Bsns3zArRmUSxs4wmyDDjc9TOs0JjSvifIAgv6W9fAEpDp1YM7S1xDh-jlf-Peg/exec";
+"https://script.google.com/macros/s/AKfycbwyco39oxTUpuxdER43s7fWDxzUbQXBWBsCFCdT3OWPoPMUzxV3kcs-Al_XRnr6R9F7/exec";
 
-
-/*
-IMPORTANT:
-Use the exact Google Apps Script Web App URL
-that is currently working for your Google Sheet.
-
-If the URL above is your existing working URL,
-you can keep it unchanged.
-*/
-
-
-/* CASHFREE */
+/* CASHFREE PAYMENT PAGE */
 
 const CASHFREE_URL =
 "https://payments.cashfree.com/forms/createnow";
 
-
 /* BAG */
 
 let bagItem = null;
-
 
 /* TEMPLATE FILTER */
 
@@ -2357,35 +2418,25 @@ if(
 category === "all" ||
 categories.includes(category)
 ){
-
 card.style.display="block";
-
 }
 else{
-
 card.style.display="none";
-
 }
 
 });
 
 }
 
-
 /* ADD TO BAG */
 
 function addToBag(template,photo,description){
 
 bagItem = {
-
 name:template,
-
 photo:photo,
-
 description:description,
-
 price:799
-
 };
 
 renderBag();
@@ -2393,7 +2444,6 @@ renderBag();
 openBag();
 
 }
-
 
 /* RENDER BAG */
 
@@ -2405,15 +2455,12 @@ document.getElementById("bagContent");
 const footer =
 document.getElementById("bagFooter");
 
-
 if(!bagItem){
 
 content.innerHTML = `
-
 <div class="bag-empty">
 Your bag is empty.
 </div>
-
 `;
 
 footer.style.display="none";
@@ -2421,7 +2468,6 @@ footer.style.display="none";
 return;
 
 }
-
 
 content.innerHTML = `
 
@@ -2441,9 +2487,9 @@ alt="${bagItem.name}">
 ${bagItem.name}
 </strong>
 
-<div class="bag-price">
-₹799
-</div>
+<span>
+Professional CV Service · ₹799
+</span>
 
 <div class="bag-description">
 ${bagItem.description}
@@ -2465,7 +2511,6 @@ footer.style.display="block";
 
 }
 
-
 /* OPEN BAG */
 
 function openBag(){
@@ -2481,7 +2526,6 @@ document
 document.body.style.overflow="hidden";
 
 }
-
 
 /* CLOSE BAG */
 
@@ -2499,7 +2543,6 @@ document.body.style.overflow="auto";
 
 }
 
-
 /* REMOVE ITEM */
 
 function removeFromBag(){
@@ -2512,16 +2555,13 @@ closeBag();
 
 }
 
-
 /* OPEN CHECKOUT */
 
 function openCheckout(){
 
 if(!bagItem){
 
-alert(
-"Please add a CV template to your bag first."
-);
+alert("Please add a CV template to your bag first.");
 
 return;
 
@@ -2529,7 +2569,7 @@ return;
 
 document
 .getElementById("selectedTemplate")
-textContent =
+.textContent =
 bagItem.name;
 
 closeBag();
@@ -2542,14 +2582,11 @@ document.body.style.overflow="hidden";
 
 }
 
-
 /* CLOSE CHECKOUT */
 
 document
 .getElementById("modal")
-.addEventListener(
-"click",
-function(e){
+.addEventListener("click",function(e){
 
 if(e.target === this){
 
@@ -2559,22 +2596,17 @@ document.body.style.overflow="auto";
 
 }
 
-}
-);
-
+});
 
 /* SUBMIT FORM */
 
 document
 .getElementById("form")
-.addEventListener(
-"submit",
-async function(e){
+.addEventListener("submit",async function(e){
 
 e.preventDefault();
 
-
-/* FULL NAME */
+/* GET FULL NAME */
 
 const fullName =
 document
@@ -2582,15 +2614,13 @@ document
 .value
 .trim();
 
-
-/* CONTACT */
+/* GET CONTACT */
 
 const contactNumber =
 document
 .getElementById("contactNumber")
 .value
 .trim();
-
 
 /* VALIDATION */
 
@@ -2604,7 +2634,6 @@ return;
 
 }
 
-
 if(!contactNumber){
 
 alert(
@@ -2614,7 +2643,6 @@ alert(
 return;
 
 }
-
 
 if(!bagItem){
 
@@ -2626,40 +2654,35 @@ return;
 
 }
 
-
 const button =
 document.getElementById("payButton");
 
 button.disabled=true;
 
-button.textContent="Processing...";
+button.textContent="Submitting Details...";
 
-
-/*
-DATA SENT TO GOOGLE SHEET
-*/
+/* DATA SENT TO GOOGLE SHEET */
 
 const data = {
 
 fullName: fullName,
 
-contact: contactNumber,
+contactNumber: contactNumber,
 
-selectedTemplate:
-bagItem.name,
+selectedTemplate: bagItem.name,
 
-amount:"799",
+amount: "799",
 
-paymentStatus:"Pending"
+paymentStatus: "Pending"
 
 };
 
-
 try{
 
-
 /*
-SEND DATA TO GOOGLE APPS SCRIPT
+Send candidate details to Google Apps Script.
+no-cors is used because the Google Apps Script
+is hosted on a different domain.
 */
 
 await fetch(
@@ -2673,41 +2696,30 @@ method:"POST",
 mode:"no-cors",
 
 headers:{
-
 "Content-Type":
 "text/plain;charset=utf-8"
-
 },
 
-body:
-JSON.stringify(data)
+body:JSON.stringify(data)
 
 }
 
 );
 
-
 button.textContent =
 "Redirecting to Payment...";
 
-
 /*
-REDIRECT TO CASHFREE
+Give Google Apps Script a short moment
+to receive the information before redirect.
 */
 
-setTimeout(
-
-function(){
+setTimeout(function(){
 
 window.location.href =
 CASHFREE_URL;
 
-},
-
-800
-
-);
-
+},1000);
 
 }
 
@@ -2726,9 +2738,7 @@ button.textContent =
 
 }
 
-}
-);
-
+});
 
 /* FAQ */
 
@@ -2740,7 +2750,6 @@ button.parentElement;
 item.classList.toggle("open");
 
 }
-
 
 /* MOBILE MENU */
 
@@ -2778,7 +2787,6 @@ nav.style.flexDirection="column";
 }
 
 </script>
-
 
 </body>
 </html>
