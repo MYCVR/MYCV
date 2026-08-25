@@ -4,7 +4,6 @@
 <head>
 
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>MYCV | Professional CV Service</title>
@@ -13,10 +12,7 @@
 content="Create a professional CV for cruise, hospitality, hotel and international career opportunities.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
-
-<link rel="preconnect"
-href="https://fonts.googleapis.com"
-crossorigin>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@600;700&display=swap"
 rel="stylesheet">
@@ -24,9 +20,9 @@ rel="stylesheet">
 
 <style>
 
-/* =====================================================
+/* =========================
    GLOBAL
-===================================================== */
+========================= */
 
 *{
     margin:0;
@@ -67,19 +63,18 @@ button{
     --navy2:#0c294b;
     --blue:#1767a8;
     --gold:#c9a55c;
-    --white:#ffffff;
+    --white:#fff;
     --light:#f7f9fc;
     --text:#172033;
     --muted:#687386;
     --border:#e2e8f0;
     --danger:#c62828;
-    --success:#16803c;
 }
 
 
-/* =====================================================
+/* =========================
    HEADER
-===================================================== */
+========================= */
 
 header{
     position:fixed;
@@ -159,9 +154,9 @@ header{
 }
 
 
-/* =====================================================
+/* =========================
    HERO
-===================================================== */
+========================= */
 
 .hero{
     min-height:730px;
@@ -257,9 +252,9 @@ header{
 }
 
 
-/* =====================================================
+/* =========================
    VALUE
-===================================================== */
+========================= */
 
 .value{
     position:relative;
@@ -297,9 +292,9 @@ header{
 }
 
 
-/* =====================================================
-   GENERAL SECTIONS
-===================================================== */
+/* =========================
+   SECTIONS
+========================= */
 
 .section{
     max-width:1250px;
@@ -332,9 +327,9 @@ header{
 }
 
 
-/* =====================================================
+/* =========================
    INTRO
-===================================================== */
+========================= */
 
 .intro{
     display:grid;
@@ -381,9 +376,9 @@ header{
 }
 
 
-/* =====================================================
+/* =========================
    CV VISUAL
-===================================================== */
+========================= */
 
 .visual{
     background:linear-gradient(145deg,#eaf2fa,#fff);
@@ -393,7 +388,6 @@ header{
     display:flex;
     justify-content:center;
     align-items:center;
-    position:relative;
 }
 
 .cv{
@@ -461,9 +455,9 @@ header{
 }
 
 
-/* =====================================================
-   TEMPLATE AREA
-===================================================== */
+/* =========================
+   TEMPLATES
+========================= */
 
 .template-area{
     background:#f0f4f8;
@@ -523,9 +517,6 @@ header{
 .preview{
     height:260px;
     background:#e6edf4;
-    display:flex;
-    justify-content:center;
-    align-items:center;
     overflow:hidden;
     position:relative;
 }
@@ -552,7 +543,6 @@ header{
     border-radius:5px;
     font-size:8px;
     font-weight:800;
-    letter-spacing:.5px;
 }
 
 .info{
@@ -617,10 +607,14 @@ header{
     background:var(--blue);
 }
 
+.add.selected{
+    background:var(--blue);
+}
 
-/* =====================================================
+
+/* =========================
    HOW IT WORKS
-===================================================== */
+========================= */
 
 .steps{
     display:grid;
@@ -656,9 +650,9 @@ header{
 }
 
 
-/* =====================================================
-   CRUISE SECTION
-===================================================== */
+/* =========================
+   CRUISE
+========================= */
 
 .cruise{
     color:white;
@@ -730,9 +724,9 @@ header{
 }
 
 
-/* =====================================================
+/* =========================
    BENEFITS
-===================================================== */
+========================= */
 
 .benefits{
     display:grid;
@@ -774,9 +768,9 @@ header{
 }
 
 
-/* =====================================================
+/* =========================
    ABOUT
-===================================================== */
+========================= */
 
 .about{
     background:#edf3f8;
@@ -794,9 +788,9 @@ header{
 }
 
 
-/* =====================================================
+/* =========================
    FAQ
-===================================================== */
+========================= */
 
 .faq{
     max-width:850px;
@@ -837,9 +831,9 @@ header{
 }
 
 
-/* =====================================================
+/* =========================
    CONTACT
-===================================================== */
+========================= */
 
 .contact{
     background:var(--navy);
@@ -883,20 +877,10 @@ header{
     margin-bottom:18px;
 }
 
-.contact-box a{
-    display:inline-block;
-    background:var(--navy);
-    color:white;
-    padding:12px 17px;
-    border-radius:7px;
-    font-size:11px;
-    font-weight:900;
-}
 
-
-/* =====================================================
+/* =========================
    FOOTER
-===================================================== */
+========================= */
 
 footer{
     background:#031020;
@@ -913,9 +897,9 @@ footer strong{
 }
 
 
-/* =====================================================
+/* =========================
    CART BUTTON
-===================================================== */
+========================= */
 
 .cart-button{
     position:fixed;
@@ -946,11 +930,12 @@ footer strong{
 }
 
 
-/* =====================================================
-   CART MODAL
-===================================================== */
+/* =========================
+   MODALS
+========================= */
 
-.cart-modal{
+.cart-modal,
+.modal{
     display:none;
     position:fixed;
     inset:0;
@@ -960,13 +945,15 @@ footer strong{
     overflow:auto;
 }
 
-.cart-modal.show{
+.cart-modal.show,
+.modal.show{
     display:flex;
     align-items:center;
     justify-content:center;
 }
 
-.cart-box{
+.cart-box,
+.checkout{
     width:100%;
     max-width:560px;
     background:white;
@@ -974,25 +961,34 @@ footer strong{
     overflow:hidden;
 }
 
-.cart-head{
+.cart-head,
+.checkout-head{
     background:var(--navy);
     color:white;
     padding:23px;
 }
 
-.cart-head h2{
+.cart-head h2,
+.checkout-head h2{
     font-size:22px;
     margin-bottom:4px;
 }
 
-.cart-head p{
+.cart-head p,
+.checkout-head p{
     color:#b8c9dc;
     font-size:10px;
 }
 
-.cart-body{
+.cart-body,
+.checkout-body{
     padding:23px;
 }
+
+
+/* =========================
+   CART
+========================= */
 
 .cart-item{
     display:flex;
@@ -1031,13 +1027,7 @@ footer strong{
     color:var(--navy);
     font-size:15px;
     font-weight:900;
-    margin-right:5px;
 }
-
-
-/* =====================================================
-   REMOVE BUTTON
-===================================================== */
 
 .remove-btn{
     border:1px solid #f0b6b6;
@@ -1054,30 +1044,30 @@ footer strong{
     color:white;
 }
 
-
-/* =====================================================
-   CART TOTAL
-===================================================== */
-
-.cart-total{
+.cart-total,
+.total{
     display:flex;
     justify-content:space-between;
+    align-items:center;
     border-top:1px solid var(--border);
     padding-top:16px;
     margin-top:8px;
 }
 
-.cart-total span{
+.cart-total span,
+.total span{
     color:var(--muted);
     font-size:12px;
 }
 
-.cart-total strong{
+.cart-total strong,
+.total strong{
     color:var(--navy);
     font-size:21px;
 }
 
-.checkout-btn{
+.checkout-btn,
+.pay{
     width:100%;
     border:0;
     background:var(--navy);
@@ -1089,7 +1079,8 @@ footer strong{
     margin-top:17px;
 }
 
-.checkout-btn:hover{
+.checkout-btn:hover,
+.pay:hover{
     background:var(--blue);
 }
 
@@ -1113,53 +1104,9 @@ footer strong{
 }
 
 
-/* =====================================================
-   CHECKOUT MODAL
-===================================================== */
-
-.modal{
-    display:none;
-    position:fixed;
-    inset:0;
-    z-index:5000;
-    background:rgba(0,0,0,.75);
-    padding:15px;
-    overflow:auto;
-}
-
-.modal.show{
-    display:flex;
-    align-items:center;
-    justify-content:center;
-}
-
-.checkout{
-    width:100%;
-    max-width:540px;
-    background:white;
-    border-radius:15px;
-    overflow:hidden;
-}
-
-.checkout-head{
-    background:var(--navy);
-    color:white;
-    padding:23px;
-}
-
-.checkout-head h2{
-    font-size:22px;
-    margin-bottom:4px;
-}
-
-.checkout-head p{
-    color:#b8c9dc;
-    font-size:10px;
-}
-
-.checkout-body{
-    padding:23px;
-}
+/* =========================
+   CHECKOUT FORM
+========================= */
 
 .selected{
     background:#f0f5fa;
@@ -1211,46 +1158,6 @@ footer strong{
     resize:vertical;
 }
 
-.total{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:13px 0;
-    border-top:1px solid var(--border);
-    border-bottom:1px solid var(--border);
-    margin:5px 0 15px;
-}
-
-.total span{
-    color:var(--muted);
-    font-size:11px;
-}
-
-.total strong{
-    color:var(--navy);
-    font-size:21px;
-}
-
-.pay{
-    width:100%;
-    background:var(--navy);
-    color:white;
-    border:0;
-    padding:13px;
-    border-radius:7px;
-    font-size:12px;
-    font-weight:900;
-}
-
-.pay:hover{
-    background:var(--blue);
-}
-
-.pay:disabled{
-    opacity:.6;
-    cursor:not-allowed;
-}
-
 .secure{
     text-align:center;
     color:#7b8795;
@@ -1259,9 +1166,9 @@ footer strong{
 }
 
 
-/* =====================================================
+/* =========================
    NOTICE
-===================================================== */
+========================= */
 
 .notice{
     position:fixed;
@@ -1280,6 +1187,7 @@ footer strong{
     transition:.3s;
     pointer-events:none;
     text-align:center;
+    max-width:90%;
 }
 
 .notice.show{
@@ -1288,9 +1196,9 @@ footer strong{
 }
 
 
-/* =====================================================
+/* =========================
    RESPONSIVE
-===================================================== */
+========================= */
 
 @media(max-width:1050px){
 
@@ -1303,7 +1211,6 @@ footer strong{
     }
 
 }
-
 
 @media(max-width:800px){
 
@@ -1326,7 +1233,6 @@ footer strong{
         flex-direction:column;
         align-items:flex-start;
         gap:18px;
-        border-top:1px solid rgba(255,255,255,.1);
     }
 
     .value{
@@ -1346,7 +1252,6 @@ footer strong{
     }
 
 }
-
 
 @media(max-width:600px){
 
@@ -1414,15 +1319,12 @@ footer strong{
         min-width:calc(100% - 100px);
     }
 
-    .cart-price{
-        margin-left:auto;
-    }
-
-    .remove-btn{
-        margin-left:auto;
-    }
-
 }
+
+
+/* =========================
+   END CSS
+========================= */
 
 </style>
 
@@ -1432,9 +1334,9 @@ footer strong{
 <body>
 
 
-<!-- =====================================================
+<!-- =========================
      HEADER
-===================================================== -->
+========================= -->
 
 <header>
 
@@ -1472,13 +1374,9 @@ Create My CV
 </nav>
 
 
-<button
-class="menu"
-onclick="mobileMenu()"
-aria-label="Open Menu">
-
+<button class="menu"
+onclick="mobileMenu()">
 ☰
-
 </button>
 
 </div>
@@ -1486,9 +1384,9 @@ aria-label="Open Menu">
 </header>
 
 
-<!-- =====================================================
+<!-- =========================
      HERO
-===================================================== -->
+========================= -->
 
 <section class="hero" id="home">
 
@@ -1532,9 +1430,9 @@ How It Works
 </section>
 
 
-<!-- =====================================================
+<!-- =========================
      VALUE
-===================================================== -->
+========================= -->
 
 <div class="value">
 
@@ -1561,9 +1459,9 @@ How It Works
 </div>
 
 
-<!-- =====================================================
+<!-- =========================
      INTRO
-===================================================== -->
+========================= -->
 
 <section class="section">
 
@@ -1592,13 +1490,8 @@ into a clean and professional format.
 <div class="check">✓</div>
 
 <div>
-
 <strong>Professional Structure</strong>
-
-<span>
-Clear sections for your profile, education and experience.
-</span>
-
+<span>Clear sections for your profile, education and experience.</span>
 </div>
 
 </div>
@@ -1609,13 +1502,8 @@ Clear sections for your profile, education and experience.
 <div class="check">✓</div>
 
 <div>
-
 <strong>Recruiter-Friendly Presentation</strong>
-
-<span>
-Important information is easier to scan and understand.
-</span>
-
+<span>Important information is easier to scan and understand.</span>
 </div>
 
 </div>
@@ -1626,13 +1514,8 @@ Important information is easier to scan and understand.
 <div class="check">✓</div>
 
 <div>
-
 <strong>Industry-Focused Options</strong>
-
-<span>
-Templates suitable for cruise, hospitality and international careers.
-</span>
-
+<span>Templates suitable for cruise, hospitality and international careers.</span>
 </div>
 
 </div>
@@ -1697,9 +1580,9 @@ Templates suitable for cruise, hospitality and international careers.
 </section>
 
 
-<!-- =====================================================
+<!-- =========================
      TEMPLATES
-===================================================== -->
+========================= -->
 
 <section class="template-area" id="templates">
 
@@ -1720,32 +1603,27 @@ your career profile.
 
 <div class="filters">
 
-<button
-class="filter active"
+<button class="filter active"
 onclick="filterTemplates('all',this)">
 All Templates
 </button>
 
-<button
-class="filter"
+<button class="filter"
 onclick="filterTemplates('professional',this)">
 Professional
 </button>
 
-<button
-class="filter"
+<button class="filter"
 onclick="filterTemplates('cruise',this)">
 Cruise
 </button>
 
-<button
-class="filter"
+<button class="filter"
 onclick="filterTemplates('ats',this)">
 ATS Friendly
 </button>
 
-<button
-class="filter"
+<button class="filter"
 onclick="filterTemplates('hospitality',this)">
 Hospitality
 </button>
@@ -1760,8 +1638,7 @@ Hospitality
 
 <!-- TEMPLATE 1 -->
 
-<div class="card"
-data-category="professional">
+<div class="card" data-category="professional">
 
 <div class="preview">
 
@@ -1791,17 +1668,14 @@ Premium CV layout for experienced candidates and professionals.
 ₹799 <small>one-time</small>
 </div>
 
-<button
-class="add"
+<button class="add"
 onclick="addToCart(
 'Executive Professional',
 799,
 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=300&q=80',
 this
 )">
-
 Add to Bag
-
 </button>
 
 </div>
@@ -1813,8 +1687,7 @@ Add to Bag
 
 <!-- TEMPLATE 2 -->
 
-<div class="card"
-data-category="cruise">
+<div class="card" data-category="cruise">
 
 <div class="preview">
 
@@ -1844,17 +1717,14 @@ Designed for cruise, maritime and hospitality candidates.
 ₹799 <small>one-time</small>
 </div>
 
-<button
-class="add"
+<button class="add"
 onclick="addToCart(
 'Cruise Professional',
 799,
 'https://images.unsplash.com/photo-1540946485063-a40da27545f8?auto=format&fit=crop&w=300&q=80',
 this
 )">
-
 Add to Bag
-
 </button>
 
 </div>
@@ -1866,8 +1736,7 @@ Add to Bag
 
 <!-- TEMPLATE 3 -->
 
-<div class="card"
-data-category="ats">
+<div class="card" data-category="ats">
 
 <div class="preview">
 
@@ -1897,17 +1766,14 @@ Clean and structured CV format for modern recruitment systems.
 ₹799 <small>one-time</small>
 </div>
 
-<button
-class="add"
+<button class="add"
 onclick="addToCart(
 'ATS Friendly',
 799,
 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=300&q=80',
 this
 )">
-
 Add to Bag
-
 </button>
 
 </div>
@@ -1919,8 +1785,7 @@ Add to Bag
 
 <!-- TEMPLATE 4 -->
 
-<div class="card"
-data-category="hospitality">
+<div class="card" data-category="hospitality">
 
 <div class="preview">
 
@@ -1950,17 +1815,14 @@ Professional CV format for hotel and hospitality roles.
 ₹799 <small>one-time</small>
 </div>
 
-<button
-class="add"
+<button class="add"
 onclick="addToCart(
 'Hospitality Pro',
 799,
 'https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=300&q=80',
 this
 )">
-
 Add to Bag
-
 </button>
 
 </div>
@@ -1975,9 +1837,9 @@ Add to Bag
 </section>
 
 
-<!-- =====================================================
+<!-- =========================
      HOW IT WORKS
-===================================================== -->
+========================= -->
 
 <section class="section" id="how">
 
@@ -1997,72 +1859,27 @@ A straightforward online process for candidates.
 <div class="steps">
 
 <div class="step">
-
-<div class="number">
-01
+<div class="number">01</div>
+<h3>Choose a Template</h3>
+<p>Select one professional CV style that matches your career.</p>
 </div>
-
-<h3>
-Choose a Template
-</h3>
-
-<p>
-Select one professional CV style that matches your career.
-</p>
-
-</div>
-
 
 <div class="step">
-
-<div class="number">
-02
+<div class="number">02</div>
+<h3>Add to Bag</h3>
+<p>Add your preferred CV template to your cart.</p>
 </div>
-
-<h3>
-Add to Bag
-</h3>
-
-<p>
-Add your preferred CV template to your cart.
-Only one service can be selected at a time.
-</p>
-
-</div>
-
 
 <div class="step">
-
-<div class="number">
-03
+<div class="number">03</div>
+<h3>Checkout & Pay ₹799</h3>
+<p>Enter your details and proceed to payment.</p>
 </div>
-
-<h3>
-Checkout & Pay ₹799
-</h3>
-
-<p>
-Review your selected template, enter your details and
-proceed to secure payment.
-</p>
-
-</div>
-
 
 <div class="step">
-
-<div class="number">
-04
-</div>
-
-<h3>
-CV Development
-</h3>
-
-<p>
-Your submitted information can then be processed for CV development.
-</p>
-
+<div class="number">04</div>
+<h3>CV Development</h3>
+<p>Your submitted information can then be processed for CV development.</p>
 </div>
 
 </div>
@@ -2070,9 +1887,9 @@ Your submitted information can then be processed for CV development.
 </section>
 
 
-<!-- =====================================================
+<!-- =========================
      CRUISE
-===================================================== -->
+========================= -->
 
 <section class="cruise">
 
@@ -2095,25 +1912,10 @@ cruise lines, hotels and hospitality opportunities.
 
 <div class="cruise-list">
 
-<div>
-<span>✓</span>
-Cruise-focused CV options
-</div>
-
-<div>
-<span>✓</span>
-Hospitality-friendly formats
-</div>
-
-<div>
-<span>✓</span>
-Professional experience structure
-</div>
-
-<div>
-<span>✓</span>
-Clean and readable presentation
-</div>
+<div><span>✓</span>Cruise-focused CV options</div>
+<div><span>✓</span>Hospitality-friendly formats</div>
+<div><span>✓</span>Professional experience structure</div>
+<div><span>✓</span>Clean and readable presentation</div>
 
 </div>
 
@@ -2145,9 +1947,9 @@ Explore Templates →
 </section>
 
 
-<!-- =====================================================
+<!-- =========================
      BENEFITS
-===================================================== -->
+========================= -->
 
 <section class="section">
 
@@ -2173,9 +1975,7 @@ clear and easy to understand.
 ATS
 </div>
 
-<h3>
-ATS-Friendly Structure
-</h3>
+<h3>ATS-Friendly Structure</h3>
 
 <p>
 Clear headings and structured sections designed for modern
@@ -2191,9 +1991,7 @@ recruitment workflows.
 ✦
 </div>
 
-<h3>
-Professional Design
-</h3>
+<h3>Professional Design</h3>
 
 <p>
 Polished layouts designed to create a strong professional impression.
@@ -2208,9 +2006,7 @@ Polished layouts designed to create a strong professional impression.
 ⚓
 </div>
 
-<h3>
-Industry Focus
-</h3>
+<h3>Industry Focus</h3>
 
 <p>
 Options for cruise, hospitality, hotel and international career profiles.
@@ -2223,9 +2019,9 @@ Options for cruise, hospitality, hotel and international career profiles.
 </section>
 
 
-<!-- =====================================================
+<!-- =========================
      ABOUT
-===================================================== -->
+========================= -->
 
 <section class="about" id="about">
 
@@ -2254,9 +2050,9 @@ experience through clean and modern CV formats.
 </section>
 
 
-<!-- =====================================================
+<!-- =========================
      FAQ
-===================================================== -->
+========================= -->
 
 <section class="section">
 
@@ -2275,21 +2071,15 @@ Frequently asked questions.
 
 <div class="faq">
 
-
 <div class="faq-item">
 
 <button class="question" onclick="faq(this)">
-
 What is the price of the CV service?
-
 <span>+</span>
-
 </button>
 
 <div class="answer">
-
 The current listed price is ₹799 as a one-time CV service fee.
-
 </div>
 
 </div>
@@ -2298,19 +2088,12 @@ The current listed price is ₹799 as a one-time CV service fee.
 <div class="faq-item">
 
 <button class="question" onclick="faq(this)">
-
 Can I select more than one CV template?
-
 <span>+</span>
-
 </button>
 
 <div class="answer">
-
 No. Only one CV service can be selected at a time.
-If you want another template, remove the current template
-and select a new one.
-
 </div>
 
 </div>
@@ -2319,17 +2102,12 @@ and select a new one.
 <div class="faq-item">
 
 <button class="question" onclick="faq(this)">
-
 Can I remove a template from my cart?
-
 <span>+</span>
-
 </button>
 
 <div class="answer">
-
 Yes. Open View Cart and click the Remove button.
-
 </div>
 
 </div>
@@ -2338,18 +2116,12 @@ Yes. Open View Cart and click the Remove button.
 <div class="faq-item">
 
 <button class="question" onclick="faq(this)">
-
 Can freshers use MYCV?
-
 <span>+</span>
-
 </button>
 
 <div class="answer">
-
-Yes. Freshers can provide their education, skills and
-other relevant information.
-
+Yes. Freshers can provide their education, skills and relevant information.
 </div>
 
 </div>
@@ -2358,18 +2130,12 @@ other relevant information.
 <div class="faq-item">
 
 <button class="question" onclick="faq(this)">
-
 Is MYCV suitable for hospitality candidates?
-
 <span>+</span>
-
 </button>
 
 <div class="answer">
-
-Yes. MYCV provides options suitable for hospitality,
-hotel and cruise-industry candidates.
-
+Yes. MYCV provides options suitable for hospitality, hotel and cruise candidates.
 </div>
 
 </div>
@@ -2378,18 +2144,12 @@ hotel and cruise-industry candidates.
 <div class="faq-item">
 
 <button class="question" onclick="faq(this)">
-
 How do I place my order?
-
 <span>+</span>
-
 </button>
 
 <div class="answer">
-
-Select a template, click Add to Bag, review your cart,
-click Checkout, complete the form and proceed to payment.
-
+Select a template, Add to Bag, Checkout, complete the form and proceed to payment.
 </div>
 
 </div>
@@ -2399,9 +2159,9 @@ click Checkout, complete the form and proceed to payment.
 </section>
 
 
-<!-- =====================================================
+<!-- =========================
      CONTACT
-===================================================== -->
+========================= -->
 
 <section class="contact" id="contact">
 
@@ -2435,7 +2195,7 @@ Ready to create your CV?
 Choose one professional template and start your order today.
 </p>
 
-<a href="#templates">
+<a href="#templates" class="primary">
 Browse CV Templates
 </a>
 
@@ -2446,15 +2206,13 @@ Browse CV Templates
 </section>
 
 
-<!-- =====================================================
+<!-- =========================
      FOOTER
-===================================================== -->
+========================= -->
 
 <footer>
 
-<strong>
-MYCV
-</strong>
+<strong>MYCV</strong>
 
 <br><br>
 
@@ -2471,9 +2229,9 @@ A service by Seaborne International MCS
 </footer>
 
 
-<!-- =====================================================
+<!-- =========================
      CHECKOUT MODAL
-===================================================== -->
+========================= -->
 
 <div class="modal" id="modal">
 
@@ -2509,12 +2267,9 @@ Professional CV Service · ₹799
 
 <form id="form">
 
-
 <div class="group">
 
-<label>
-Full Name *
-</label>
+<label>Full Name *</label>
 
 <input
 type="text"
@@ -2527,9 +2282,7 @@ required>
 
 <div class="group">
 
-<label>
-Contact Number *
-</label>
+<label>Contact Number *</label>
 
 <input
 type="tel"
@@ -2542,9 +2295,7 @@ required>
 
 <div class="group">
 
-<label>
-Email ID *
-</label>
+<label>Email ID *</label>
 
 <input
 type="email"
@@ -2557,9 +2308,7 @@ required>
 
 <div class="group">
 
-<label>
-Full Address *
-</label>
+<label>Full Address *</label>
 
 <textarea
 id="fullAddress"
@@ -2571,13 +2320,9 @@ required></textarea>
 
 <div class="total">
 
-<span>
-Total
-</span>
+<span>Total</span>
 
-<strong>
-₹799
-</strong>
+<strong>₹799</strong>
 
 </div>
 
@@ -2596,7 +2341,6 @@ Pay Now – ₹799
 🔒 Secure payment via Cashfree
 </div>
 
-
 </form>
 
 </div>
@@ -2606,9 +2350,9 @@ Pay Now – ₹799
 </div>
 
 
-<!-- =====================================================
+<!-- =========================
      CART BUTTON
-===================================================== -->
+========================= -->
 
 <button
 class="cart-button"
@@ -2626,9 +2370,9 @@ id="cartCount">
 </button>
 
 
-<!-- =====================================================
+<!-- =========================
      CART MODAL
-===================================================== -->
+========================= -->
 
 <div class="cart-modal" id="cartModal">
 
@@ -2654,9 +2398,7 @@ Only one CV service can be selected at a time.
 
 <div class="cart-total">
 
-<span>
-Total
-</span>
+<span>Total</span>
 
 <strong id="cartTotal">
 ₹0
@@ -2689,9 +2431,9 @@ Continue Shopping
 </div>
 
 
-<!-- =====================================================
+<!-- =========================
      NOTICE
-===================================================== -->
+========================= -->
 
 <div
 class="notice"
@@ -2699,35 +2441,39 @@ id="notice">
 </div>
 
 
-<!-- =====================================================
-     JAVASCRIPT
-===================================================== -->
-
 <script>
 
 /* =====================================================
+   IMPORTANT SETTINGS
+===================================================== */
+
+/*
    GOOGLE APPS SCRIPT WEB APP URL
-===================================================== */
-
+*/
 const GOOGLE_SCRIPT_URL =
-"https://script.google.com/macros/s/AKfycbzBe4Bsns3zArRmUSxs4wmyDDjc9TOs0JjSvifIAgv6Wg9fAEpDp1YM7S1xDh-jlf-Peg/exec";
+"https://script.google.com/macros/s/AKfycbxc9iAqUSGOPdwLEQBetYYHobrQAzdZoyIxIrvwLMgSk8HzV6q3Hrc3-DoHuqGN1_Gz/exec";
 
 
-/* =====================================================
-   CASHFREE PAYMENT FORM URL
-===================================================== */
-
+/*
+   CASHFREE PAYMENT LINK
+*/
 const CASHFREE_URL =
 "https://payments.cashfree.com/forms/createnow";
+
+
+/*
+   SERVICE PRICE
+*/
+const SERVICE_PRICE = 799;
 
 
 /* =====================================================
    VARIABLES
 ===================================================== */
 
-let selectedTemplate = "";
-
 let cart = [];
+
+let selectedTemplate = "";
 
 
 /* =====================================================
@@ -2739,8 +2485,7 @@ function showNotice(message){
     const notice =
     document.getElementById("notice");
 
-    notice.textContent =
-    message;
+    notice.textContent = message;
 
     notice.classList.add("show");
 
@@ -2748,13 +2493,13 @@ function showNotice(message){
 
         notice.classList.remove("show");
 
-    },3000);
+    },3500);
 
 }
 
 
 /* =====================================================
-   TEMPLATE FILTER
+   FILTER TEMPLATES
 ===================================================== */
 
 function filterTemplates(category,button){
@@ -2774,21 +2519,20 @@ function filterTemplates(category,button){
     .querySelectorAll(".card")
     .forEach(function(card){
 
-        const categories =
+        const cardCategory =
         card.dataset.category;
-
 
         if(
             category === "all" ||
-            categories.includes(category)
+            cardCategory === category
         ){
 
-            card.style.display="block";
+            card.style.display = "block";
 
         }
         else{
 
-            card.style.display="none";
+            card.style.display = "none";
 
         }
 
@@ -2803,10 +2547,6 @@ function filterTemplates(category,button){
 
 function addToCart(template,price,image,button){
 
-    /*
-       Only one service allowed.
-    */
-
     if(cart.length > 0){
 
         if(cart[0].template === template){
@@ -2817,9 +2557,8 @@ function addToCart(template,price,image,button){
 
         }
 
-
         showNotice(
-            "Only one CV service can be selected at a time. Please remove your current template first."
+            "Only one CV service can be selected at a time. Please remove the current template first."
         );
 
         openCart();
@@ -2831,26 +2570,18 @@ function addToCart(template,price,image,button){
 
     cart.push({
 
-        template:template,
-
-        price:price,
-
-        image:image
+        template: template,
+        price: price,
+        image: image
 
     });
 
 
-    button.textContent =
-    "View Cart";
+    button.textContent = "View Cart";
 
+    button.classList.add("selected");
 
-    button.classList.add(
-        "selected-button"
-    );
-
-
-    button.onclick =
-    function(){
+    button.onclick = function(){
 
         openCart();
 
@@ -2858,7 +2589,6 @@ function addToCart(template,price,image,button){
 
 
     updateCart();
-
 
     document
     .getElementById("cartButton")
@@ -2876,33 +2606,23 @@ function addToCart(template,price,image,button){
 
 function removeFromCart(template){
 
-    cart =
-    cart.filter(function(item){
+    cart = cart.filter(function(item){
 
         return item.template !== template;
 
     });
 
 
-    /*
-       Reset all buttons.
-    */
-
     document
     .querySelectorAll(".add")
     .forEach(function(button){
 
-        button.textContent =
-        "Add to Bag";
+        button.textContent = "Add to Bag";
 
-        button.classList.remove(
-            "selected-button"
-        );
-
+        button.classList.remove("selected");
 
         const card =
         button.closest(".card");
-
 
         if(card){
 
@@ -2911,18 +2631,15 @@ function removeFromCart(template){
             .textContent
             .trim();
 
-
             const image =
             card.querySelector("img")
             .src;
 
-
-            button.onclick =
-            function(){
+            button.onclick = function(){
 
                 addToCart(
                     title,
-                    799,
+                    SERVICE_PRICE,
                     image,
                     button
                 );
@@ -2961,26 +2678,27 @@ function updateCart(){
     const content =
     document.getElementById("cartContent");
 
-
     const count =
     document.getElementById("cartCount");
-
 
     const total =
     document.getElementById("cartTotal");
 
 
-    count.textContent =
-    cart.length;
+    count.textContent = cart.length;
 
 
     if(cart.length === 0){
 
         content.innerHTML =
-        '<div class="empty-cart">Your cart is empty.<br><br>Select one CV template to continue.</div>';
+        `
+        <div class="empty-cart">
+        Your cart is empty.<br><br>
+        Select one CV template to continue.
+        </div>
+        `;
 
-        total.textContent =
-        "₹0";
+        total.textContent = "₹0";
 
         return;
 
@@ -3001,31 +2719,31 @@ function updateCart(){
         <div class="cart-item">
 
             <img
-                class="cart-item-image"
-                src="${item.image}"
-                alt="${item.template}">
+            class="cart-item-image"
+            src="${item.image}"
+            alt="${item.template}">
 
             <div class="cart-item-info">
 
                 <strong>
-                    ${item.template}
+                ${item.template}
                 </strong>
 
                 <span>
-                    Professional CV Service
+                Professional CV Service
                 </span>
 
             </div>
 
             <div class="cart-price">
-                ₹${item.price}
+            ₹${item.price}
             </div>
 
             <button
-                class="remove-btn"
-                onclick="removeFromCart('${item.template}')">
+            class="remove-btn"
+            onclick="removeFromCart('${item.template}')">
 
-                Remove
+            Remove
 
             </button>
 
@@ -3050,15 +2768,11 @@ function openCart(){
 
     updateCart();
 
-
     document
     .getElementById("cartModal")
     .classList.add("show");
 
-
-    document.body.classList.add(
-        "no-scroll"
-    );
+    document.body.classList.add("no-scroll");
 
 }
 
@@ -3073,16 +2787,13 @@ function closeCart(){
     .getElementById("cartModal")
     .classList.remove("show");
 
-
-    document.body.classList.remove(
-        "no-scroll"
-    );
+    document.body.classList.remove("no-scroll");
 
 }
 
 
 /* =====================================================
-   CART → CHECKOUT
+   GO TO CHECKOUT
 ===================================================== */
 
 function goToCheckout(){
@@ -3098,7 +2809,7 @@ function goToCheckout(){
     }
 
 
-    if(cart.length > 1){
+    if(cart.length !== 1){
 
         showNotice(
             "Only one CV service is allowed per order."
@@ -3126,16 +2837,28 @@ function goToCheckout(){
     .getElementById("modal")
     .classList.add("show");
 
-
-    document.body.classList.add(
-        "no-scroll"
-    );
+    document.body.classList.add("no-scroll");
 
 }
 
 
 /* =====================================================
-   CLOSE CHECKOUT OUTSIDE
+   CLOSE CHECKOUT
+===================================================== */
+
+function closeCheckout(){
+
+    document
+    .getElementById("modal")
+    .classList.remove("show");
+
+    document.body.classList.remove("no-scroll");
+
+}
+
+
+/* =====================================================
+   OUTSIDE CLICK
 ===================================================== */
 
 document
@@ -3146,20 +2869,12 @@ function(e){
 
     if(e.target === this){
 
-        this.classList.remove("show");
-
-        document.body.classList.remove(
-            "no-scroll"
-        );
+        closeCheckout();
 
     }
 
 });
 
-
-/* =====================================================
-   CLOSE CART OUTSIDE
-===================================================== */
 
 document
 .getElementById("cartModal")
@@ -3169,11 +2884,7 @@ function(e){
 
     if(e.target === this){
 
-        this.classList.remove("show");
-
-        document.body.classList.remove(
-            "no-scroll"
-        );
+        closeCart();
 
     }
 
@@ -3181,8 +2892,7 @@ function(e){
 
 
 /* =====================================================
-   SUBMIT FORM
-   GOOGLE SHEET → CASHFREE
+   FORM SUBMISSION
 ===================================================== */
 
 document
@@ -3194,22 +2904,16 @@ async function(e){
     e.preventDefault();
 
 
-    /*
-       Safety check
-    */
-
     if(cart.length !== 1){
 
         showNotice(
-            "Please select exactly one CV template before checkout."
+            "Please select one CV template first."
         );
 
         return;
 
     }
 
-
-    /* Get customer details */
 
     const fullName =
     document
@@ -3239,10 +2943,6 @@ async function(e){
     .trim();
 
 
-    /*
-       Validate form
-    */
-
     if(
         !fullName ||
         !contactNumber ||
@@ -3259,50 +2959,38 @@ async function(e){
     }
 
 
-    const button =
-    document.getElementById(
-        "payButton"
-    );
+    const payButton =
+    document.getElementById("payButton");
 
 
-    button.disabled =
-    true;
+    payButton.disabled = true;
 
-
-    button.textContent =
-    "Saving Your Details...";
+    payButton.textContent =
+    "Saving Details...";
 
 
     /*
-       Data that will be sent to Google Sheet
+       Data sent to Google Sheet
     */
 
-    const data = {
+    const orderData = {
 
-        fullName:
-        fullName,
+        fullName: fullName,
 
-        contactNumber:
-        contactNumber,
+        contactNumber: contactNumber,
 
-        email:
-        email,
+        email: email,
 
-        fullAddress:
-        fullAddress,
+        fullAddress: fullAddress,
 
         selectedTemplate:
         selectedTemplate,
 
         amount:
-        "799",
+        String(SERVICE_PRICE),
 
         paymentStatus:
-        "Pending",
-
-        date:
-        new Date()
-        .toLocaleString("en-IN")
+        "Pending"
 
     };
 
@@ -3310,9 +2998,11 @@ async function(e){
     try{
 
         /*
-           STEP 1:
-           Save customer information
-           to Google Sheet
+           Send data to Google Apps Script.
+
+           no-cors is intentionally used because
+           this is a GitHub Pages frontend calling
+           Google Apps Script.
         */
 
         await fetch(
@@ -3321,11 +3011,11 @@ async function(e){
 
             {
 
-                method:"POST",
+                method: "POST",
 
-                mode:"no-cors",
+                mode: "no-cors",
 
-                headers:{
+                headers: {
 
                     "Content-Type":
                     "text/plain;charset=utf-8"
@@ -3333,7 +3023,7 @@ async function(e){
                 },
 
                 body:
-                JSON.stringify(data)
+                JSON.stringify(orderData)
 
             }
 
@@ -3341,23 +3031,24 @@ async function(e){
 
 
         /*
-           STEP 2:
-           Redirect candidate to Cashfree
+           Google Apps Script request has been sent.
         */
 
-        button.textContent =
-        "Opening Cashfree Payment...";
+        payButton.textContent =
+        "Redirecting to Payment...";
 
 
-        setTimeout(
-        function(){
+        /*
+           Small delay so the request can leave
+           the browser before redirect.
+        */
+
+        setTimeout(function(){
 
             window.location.href =
             CASHFREE_URL;
 
-        },
-        800
-        );
+        },1200);
 
 
     }
@@ -3365,21 +3056,19 @@ async function(e){
     catch(error){
 
         console.error(
-            "Submission Error:",
+            "Google Sheet Error:",
             error
         );
 
 
         showNotice(
-            "Unable to submit your details. Please try again."
+            "Unable to send details. Please try again."
         );
 
 
-        button.disabled =
-        false;
+        payButton.disabled = false;
 
-
-        button.textContent =
+        payButton.textContent =
         "Pay Now – ₹799";
 
     }
@@ -3396,7 +3085,6 @@ function faq(button){
     const item =
     button.parentElement;
 
-
     item.classList.toggle("open");
 
 
@@ -3408,14 +3096,12 @@ function faq(button){
         item.classList.contains("open")
     ){
 
-        icon.textContent =
-        "−";
+        icon.textContent = "−";
 
     }
     else{
 
-        icon.textContent =
-        "+";
+        icon.textContent = "+";
 
     }
 
@@ -3429,21 +3115,12 @@ function faq(button){
 function mobileMenu(){
 
     const nav =
-    document.getElementById(
-        "mainNav"
-    );
+    document.getElementById("mainNav");
 
-
-    nav.classList.toggle(
-        "mobile-open"
-    );
+    nav.classList.toggle("mobile-open");
 
 }
 
-
-/* =====================================================
-   CLOSE MOBILE MENU
-===================================================== */
 
 document
 .querySelectorAll("#mainNav a")
@@ -3476,9 +3153,8 @@ function(){
 
 });
 
+
 </script>
 
-
 </body>
-
 </html>
