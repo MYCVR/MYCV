@@ -40,7 +40,8 @@ text-decoration:none;
 
 button,
 input,
-textarea{
+textarea,
+select{
 font-family:inherit;
 }
 
@@ -1109,6 +1110,7 @@ max-width:500px;
 background:white;
 border-radius:15px;
 overflow:hidden;
+margin:20px auto;
 }
 
 .checkout-head{
@@ -1161,16 +1163,27 @@ font-weight:800;
 margin-bottom:5px;
 }
 
-.group input{
+.group input,
+.group textarea,
+.group select{
 width:100%;
 padding:12px;
 border:1px solid #d5dde6;
 border-radius:6px;
 outline:none;
 font-size:12px;
+background:white;
+color:var(--text);
 }
 
-.group input:focus{
+.group textarea{
+resize:vertical;
+min-height:80px;
+}
+
+.group input:focus,
+.group textarea:focus,
+.group select:focus{
 border-color:var(--blue);
 box-shadow:0 0 0 3px rgba(23,103,168,.08);
 }
@@ -1310,6 +1323,10 @@ padding:70px 20px;
 
 .bag-drawer{
 width:100%;
+max-width:100%;
+}
+
+.checkout{
 max-width:100%;
 }
 
@@ -1914,7 +1931,7 @@ A straightforward online process for candidates.
 <div class="step">
 <div class="number">03</div>
 <h3>Enter Your Details</h3>
-<p>Provide your full name and contact number before payment.</p>
+<p>Provide your personal and contact information before payment.</p>
 </div>
 
 <div class="step">
@@ -2140,8 +2157,7 @@ How do I place my order?
 
 <div class="answer">
 Select a template, click Add to Bag, review your bag,
-click Checkout, enter your full name and contact number,
-and proceed to the secure payment page.
+click Checkout, enter your details, and proceed to the secure payment page.
 </div>
 
 </div>
@@ -2295,7 +2311,7 @@ Complete Your Order
 </h2>
 
 <p>
-Enter your full name and contact number before proceeding to payment.
+Please enter your details before proceeding to payment.
 </p>
 
 </div>
@@ -2348,6 +2364,188 @@ required>
 
 </div>
 
+<!-- EMAIL -->
+
+<div class="group">
+
+<label>
+Email ID *
+</label>
+
+<input
+type="email"
+id="email"
+placeholder="Enter your email address"
+required>
+
+</div>
+
+<!-- FULL ADDRESS -->
+
+<div class="group">
+
+<label>
+Full Address *
+</label>
+
+<textarea
+id="fullAddress"
+placeholder="Enter your full address"
+rows="3"
+required></textarea>
+
+</div>
+
+<!-- CITY -->
+
+<div class="group">
+
+<label>
+City *
+</label>
+
+<input
+type="text"
+id="city"
+placeholder="Enter your city"
+required>
+
+</div>
+
+<!-- STATE -->
+
+<div class="group">
+
+<label>
+State *
+</label>
+
+<input
+type="text"
+id="state"
+placeholder="Enter your state"
+required>
+
+</div>
+
+<!-- PINCODE -->
+
+<div class="group">
+
+<label>
+Pincode *
+</label>
+
+<input
+type="text"
+id="pincode"
+placeholder="Enter your pincode"
+inputmode="numeric"
+maxlength="6"
+required>
+
+</div>
+
+<!-- DATE OF BIRTH -->
+
+<div class="group">
+
+<label>
+Date of Birth *
+</label>
+
+<input
+type="date"
+id="dateOfBirth"
+required>
+
+</div>
+
+<!-- MARITAL STATUS -->
+
+<div class="group">
+
+<label>
+Marital Status *
+</label>
+
+<select
+id="maritalStatus"
+required>
+
+<option value="">
+Select marital status
+</option>
+
+<option value="Single">
+Single
+</option>
+
+<option value="Married">
+Married
+</option>
+
+<option value="Divorced">
+Divorced
+</option>
+
+<option value="Widowed">
+Widowed
+</option>
+
+</select>
+
+</div>
+
+<!-- RELIGION -->
+
+<div class="group">
+
+<label>
+Religion *
+</label>
+
+<input
+type="text"
+id="religion"
+placeholder="Enter your religion"
+required>
+
+</div>
+
+<!-- LANGUAGE -->
+
+<div class="group">
+
+<label>
+Language *
+</label>
+
+<input
+type="text"
+id="language"
+placeholder="Example: English, Hindi"
+required>
+
+</div>
+
+<!-- PASSPORT NUMBER -->
+
+<div class="group">
+
+<label>
+Valid Passport Number *
+</label>
+
+<input
+type="text"
+id="passportNumber"
+placeholder="Enter your valid passport number"
+maxlength="20"
+required>
+
+</div>
+
 <div class="total">
 
 <span>Total</span>
@@ -2384,7 +2582,7 @@ Pay Now – ₹799
 /* GOOGLE APPS SCRIPT WEB APP */
 
 const GOOGLE_SCRIPT_URL =
-"https://script.google.com/macros/s/AKfycbwyco39oxTUpuxdER43s7fWDxzUbQXBWBsCFCdT3OWPoPMUzxV3kcs-Al_XRnr6R9F7/exec";
+"https://script.google.com/macros/s/AKfycbzxWvR8OI-WiyGvmVijozMw9O30SmCbDt7b-NSxgkpOXBd5v_-Tk2pkvdtN6axYnzA/exec";
 
 /* CASHFREE PAYMENT PAGE */
 
@@ -2622,6 +2820,84 @@ document
 .value
 .trim();
 
+/* GET EMAIL */
+
+const email =
+document
+.getElementById("email")
+.value
+.trim();
+
+/* GET FULL ADDRESS */
+
+const fullAddress =
+document
+.getElementById("fullAddress")
+.value
+.trim();
+
+/* GET CITY */
+
+const city =
+document
+.getElementById("city")
+.value
+.trim();
+
+/* GET STATE */
+
+const state =
+document
+.getElementById("state")
+.value
+.trim();
+
+/* GET PINCODE */
+
+const pincode =
+document
+.getElementById("pincode")
+.value
+.trim();
+
+/* GET DATE OF BIRTH */
+
+const dateOfBirth =
+document
+.getElementById("dateOfBirth")
+.value;
+
+/* GET MARITAL STATUS */
+
+const maritalStatus =
+document
+.getElementById("maritalStatus")
+.value;
+
+/* GET RELIGION */
+
+const religion =
+document
+.getElementById("religion")
+.value
+.trim();
+
+/* GET LANGUAGE */
+
+const language =
+document
+.getElementById("language")
+.value
+.trim();
+
+/* GET PASSPORT NUMBER */
+
+const passportNumber =
+document
+.getElementById("passportNumber")
+.value
+.trim();
+
 /* VALIDATION */
 
 if(!fullName){
@@ -2638,6 +2914,106 @@ if(!contactNumber){
 
 alert(
 "Please enter your contact number."
+);
+
+return;
+
+}
+
+if(!email){
+
+alert(
+"Please enter your email address."
+);
+
+return;
+
+}
+
+if(!fullAddress){
+
+alert(
+"Please enter your full address."
+);
+
+return;
+
+}
+
+if(!city){
+
+alert(
+"Please enter your city."
+);
+
+return;
+
+}
+
+if(!state){
+
+alert(
+"Please enter your state."
+);
+
+return;
+
+}
+
+if(!pincode){
+
+alert(
+"Please enter your pincode."
+);
+
+return;
+
+}
+
+if(!dateOfBirth){
+
+alert(
+"Please enter your date of birth."
+);
+
+return;
+
+}
+
+if(!maritalStatus){
+
+alert(
+"Please select your marital status."
+);
+
+return;
+
+}
+
+if(!religion){
+
+alert(
+"Please enter your religion."
+);
+
+return;
+
+}
+
+if(!language){
+
+alert(
+"Please enter your language."
+);
+
+return;
+
+}
+
+if(!passportNumber){
+
+alert(
+"Please enter your valid passport number."
 );
 
 return;
@@ -2668,6 +3044,26 @@ const data = {
 fullName: fullName,
 
 contactNumber: contactNumber,
+
+email: email,
+
+fullAddress: fullAddress,
+
+city: city,
+
+state: state,
+
+pincode: pincode,
+
+dateOfBirth: dateOfBirth,
+
+maritalStatus: maritalStatus,
+
+religion: religion,
+
+language: language,
+
+passportNumber: passportNumber,
 
 selectedTemplate: bagItem.name,
 
